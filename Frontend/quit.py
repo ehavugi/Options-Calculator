@@ -3,21 +3,21 @@ from PyQt5.QtWidgets import QPushButton, QLabel
 
 
 def quit(page):
-    # 标题
+    # title
     label_main = QLabel()
     label_main.setFont(page.font_main)
-    label_main.setText(" 江湖再见")
+    label_main.setText("Goodbye Jianghu")
     page.grid.addWidget(label_main, 0, 0)
-    # 文本
+    # text
     label_content = QLabel()
     label_content.setFont(page.font_content)
-    label_content.setText("      去留无意,望天上云卷云舒。\n      路过万水千重，期待与你温柔重逢。")
+    label_content.setText("I have no intention of leaving or leaving, just look at the clouds rolling in the sky.\n I have passed through thousands of waters and look forward to a gentle reunion with you.")
     page.grid.addWidget(label_content, 1, 0)
-    # 撑空白的地方
+    # Hold the blank space
     label_empty = QLabel()
     page.grid.addWidget(label_empty, 2, 0, 2, 1)
-    # 退出标题
-    qbtn = QPushButton('去意已决')
+    # Exit title
+    qbtn = QPushButton('Decided to leave')
     qbtn.clicked.connect(QCoreApplication.instance().quit)
     qbtn.setStyleSheet('''
         QPushButton:hover{color:red}
@@ -25,6 +25,3 @@ def quit(page):
                     font-weight:200;
         }''')
     page.grid.addWidget(qbtn, 4, 0)
-
-
-

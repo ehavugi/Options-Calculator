@@ -2,23 +2,23 @@ from PyQt5.QtWidgets import QLabel
 
 
 def about(page):
-    # 标题
+    # title
     label_main = QLabel()
     label_main.setFont(page.font_main)
-    label_main.setText(" 毛遂自荐")
+    label_main.setText("self-recommendation")
     page.grid.addWidget(label_main, 0, 0)
-    # 文本
+    # text
     label_content = QLabel()
     label_content.setFont(page.font_content)
-    label_content.setText("      这是期权价格计算器的开发人员。\n      为您的使用保驾护航。\n      来去匆匆，请多指教。")
+    label_content.setText("\t\tThis is the developer of the option price calculator. \n\t\tTo protect your use. \n\t\tCome and go in a hurry, please give me some advice.")
     page.grid.addWidget(label_content, 1, 0)
-    # 另一段文本
+    # another text
     label_content = QLabel()
     label_content.setFont(page.font_content)
-    label_content.setText("      杨宇昊 3160105521\n      张天暖 3160103915\n      程   龙 3160104356")
+    label_content.setText("\t\tYang Yuhao 3160105521\n\t\tZhang Tiannuan 3160103915\n\t\tCheng Long 3160104356")
     page.grid.addWidget(label_content, 2, 0, 1, 1)
-    # Github页面
+    # Github Page
     label_empty = QLabel()
     label_empty.setFont(page.font_content)
-    label_empty.setText("      这是项目的 Github 仓库页面\n      https://github.com/QSCTech-Sange/Options-Calculator")
+    label_empty.setText("\t\tThis is the project's Github [SOURCE] repository page\n\t\thttps://github.com/QSCTech-Sange/Options-Calculator")
     page.grid.addWidget(label_empty, 4, 0)

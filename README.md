@@ -1,60 +1,59 @@
-> 更多精彩内容请访问[我的博客](https://qsctech-sange.github.io)，一起来康康吧！
+> For more exciting content, please visit [my blog](https://qsctech-sange.github.io), let’s have a good time together!
 
 # Options Calculator
 
-这是一个全能的期权计算器，涵盖 BS法，蒙特卡洛法，二叉数法，能够对看涨期权，看跌期权，欧式期权，美式期权，有股利期权，无股利期权进行定价，并附带GUI客户端。
+This is an all-in-one option calculator, covering the BS method, Monte Carlo method, and binary method. It can price call options, put options, European options, American options, options with dividends, and options without dividends, and comes with a GUI. client.
 
-本计算器的**特色**在于
+The **feature** of this calculator is that
 
-1. 支持非常全面的期权类型
-2. 美观优雅简洁大方的界面
-3. 采用了多线程的方式来优化用户体验
-4. 可以直接提取使用其中的 `Option` 类来应用于你所需要的计算期权价格的地方
-5. 可以指定具体日期而不用再手动算时间间隔
-6. 可以直接输入一年计无风险利率而不用用户计算连续复利
+1. Supports a very comprehensive range of option types
+2. Beautiful, elegant, concise and generous interface
+3. Use multi-threading to optimize user experience
+4. You can directly extract and use the `Option` class to apply it where you need to calculate option prices.
+5. You can specify a specific date without having to manually calculate the time interval.
+6. You can directly enter the one-year risk-free interest rate without the user having to calculate continuous compound interest.
 
-> 以上两点直接将 Options Calculator 从普通的学术研究计算器拉到了普世的，实用的价值层面。广度层面的延伸。
+> The above two points directly bring Options Calculator from an ordinary academic research calculator to a universal and practical value level. extension at the breadth level.
 
-7. 可以比较观察不同方法的计算结果差异
-8. 可以手动指定二叉树方法和蒙特卡罗方法的迭代次数，更好地理解期权定价。
+7. You can compare and observe the differences in calculation results of different methods.
+8. You can manually specify the number of iterations of the binary tree method and the Monte Carlo method to better understand option pricing.
 
-> 以上两点深化了 Options Calculator 的学术研究价值意义。深度层面的加强。
+> The above two points deepen the academic research value of Options Calculator. Depth level enhancements.
 
 
-
-## 功能介绍
+## Features
 
 ![welcome](img/welcome.png)
 
-主界面采用流行的左右布局，左侧是 LOGO 和 六个 Tab 标签功能页，右侧为每一个标签页对应的主界面。默认在第一个 Tab 下，即欢迎光临。因为还没有输入参数，因此无法查看价格，第三个标签是禁止的。
+The main interface adopts the popular left-right layout. The left side is the LOGO and six Tab tab function pages, and the right side is the main interface corresponding to each tab page. The default is under the first Tab, which is Welcome. Since no parameters have been entered, the price cannot be viewed and the third tab is disabled.
 
 ![input](img/input.png)
 
-在输入参数界面，涵盖了有关期权的一些参数录入。首先是当前日期，默认会设置今天的日期，可以指定往期日期。这里点击后会调用一个日历格式。到期日期默认为当前日期的后十天。然后有美式欧式和看涨看跌的选项，只提供两种选择。最后是标的资产现价，期权执行价，波动率，一年单利计无风险利率，一年单利计股息利率的输入。这里会默认提供一些，以便用户想直接看结果。波动率，无风险利率，股息利率都是结尾是%的，即如果用户要输入 5%，只要输入5即可。在其他期权计算器中往往都是让用户直接输入无风险利率，而我们这里要求用户需要输入的是一年单利计利率，将转换交给了计算器本身。最后可以指定蒙特卡罗迭代次数和二叉树次数，也可以使用默认的设定。
+In the input parameter interface, it covers the entry of some parameters related to options. The first is the current date. Today's date is set by default, and past dates can be specified. Clicking here will call a calendar format. The expiration date defaults to ten days after the current date. Then there are American European and Bullish or Bearish options, only two options are available. Finally, there is the input of the current price of the underlying asset, option exercise price, volatility, one-year simple interest risk-free interest rate, and one-year simple interest dividend interest rate. Some will be provided by default here in case users want to see the results directly. Volatility, risk-free interest rate, and dividend interest rate all end with %, that is, if the user wants to enter 5%, just enter 5. In other option calculators, users are often asked to directly enter the risk-free interest rate, but here we require users to enter the one-year simple interest rate, leaving the conversion to the calculator itself. Finally, you can specify the number of Monte Carlo iterations and the number of binary trees, or you can use the default settings.
 
 ![result](img/result.png)
 
-当点击确定输入后，会弹出提示框让用户等待，并在完成后自动跳转到查看价格的 Tab。可以观察三种方法的计算结果。
+After clicking to confirm the input, a prompt box will pop up to ask the user to wait, and after completion, it will automatically jump to the tab for viewing the price. The calculation results of three methods can be observed.
 
 ![1559705817688](img/list.png)
 
-算法一览直(tou)接(lan)进入MBA的网页界面。
+The algorithm overview is directly (tou) connected (lan) to the MBA web interface.
 
 ![img](img/about.png)
 
-关于我们。
+about Us.
 
 ![quit](img/quit.png)
 
-再见页面。
+Goodbye page.
 
 
 
-## 编译方法
+## Compilation method
 
-项目依赖于 `Python3`以及下列Python包：`numpy`,`pyqt5`,`qtawesome` 和 `scipy`。
+The project depends on `Python3` and the following Python packages: `numpy`, `pyqt5`, `qtawesome` and `scipy`.
 
-安装完 python 后可进入项目目录通过以下指令安装缺少的包。
+After installing python, you can enter the project directory and install the missing packages through the following instructions.
 
 ```shell
 pip install requirements.txt
@@ -62,23 +61,21 @@ pip install requirements.txt
 
 
 
-1. 在 [本页面](<https://github.com/QSCTech-Sange/Options-Calculator>) 下载此仓库，并解压
-2. 在终端中输入
+1. Download this repository on [this page](<https://github.com/QSCTech-Sange/Options-Calculator>) and unzip it
+2. Enter in the terminal
 
 ```shell
-cd 到刚刚解压的目录
+cd to the directory you just extracted
 cd Frontend
 chmod a+x main.py
 python main.py
 ```
 
-即可。
+That’s it.
 
+## Project structure
 
-
-## 项目结构
-
-本项目总共621行，结构如下：
+This project has a total of 621 lines and the structure is as follows:
 
 ```shell
 .
@@ -113,34 +110,23 @@ python main.py
 
 ```
 
-项目分为前端和后端，前端在` Frontend` 文件夹里，后端在 `Backend` 文件夹里。`README.md` 即本文件。根目录下 `img` 里的文件只是为了本文档的渲染而已，忽略即可。 `requirements.txt` 记录了项目的依赖。
+The project is divided into front-end and back-end. The front-end is in the `Frontend` folder and the back-end is in the `Backend` folder. `README.md` is this file. The files in `img` in the root directory are only for the rendering of this document, so just ignore them. `requirements.txt` records the project's dependencies.
 
-### 后端
+### rear end
 
-后端里有`__init__.py` 和 `option.py`。 前者仅仅只是为了前端导入所必要的文件，其内容为空。
+There are `__init__.py` and `option.py` in the backend. The former is just a file necessary for front-end import, and its content is empty.
 
-而 `Option.py` 是核心，有一个 `option` 类，内含期权的数据和计算价格的方法。可以打开阅读，有详尽的注释。我们需要 `numpy` 来计算`ndarray`列表和生成随机数，需要`scipy` 来计算正态分布分布函数。内置了 B-S 算法，蒙特卡罗算法和二叉树算法。
+`Option.py` is the core, with an `option` class containing option data and methods for calculating prices. It can be opened and read, with detailed comments. We need `numpy` to calculate the `ndarray` list and generate random numbers, and `scipy` to calculate the normal distribution distribution function. Built-in B-S algorithm, Monte Carlo algorithm and binary tree algorithm.
 
-### 前端
+### front end
 
-前端基于`Qt`的主框架，主界面在 `main.py` 里，需要 `qtawesome`来绘制图标。`page.py`是一个单独页面的基础。
+The front-end is based on the main framework of `Qt`. The main interface is in `main.py` and requires `qtawesome` to draw icons. `page.py` is the basis for a single page.
 
-`welcome.py` `input.py` `result.py` `list.py` `about.py` `quit.py`  分别对应欢迎页面，输入页面，结果页面，算法一览页面和退出页面。`style.qss` 是样式，定义了一些诸如哪些按钮应该长什么样等等。此目录里的 img  里的文件是绘制界面需要用的一些图片。
+`welcome.py` `input.py` `result.py` `list.py` `about.py` `quit.py` correspond to the welcome page, input page, results page, algorithm overview page and exit page respectively. `style.qss` is the style, which defines some things such as which buttons should look like and so on. The files in img in this directory are some pictures needed to draw the interface.
 
 
 
-## 算法详解
-
-### Option 类
-
-+ `european` 为是否是欧式期权 (False 为欧式期权)
-+ `kind` 看涨或看跌（`Put` 为 -1 ,` Call` 为 1）
-+ `s0` 标的资产现价
-+ `k` 期权执行价
-+ `t` 期权到期时间 - 现在时间
-+ `r` 适用的无风险利率
-+ `sigma` 适用的波动率
-+ `dv` 股利利率
+## Detailed explanation of algorithm
 
 ```python
 class Option:
@@ -159,11 +145,11 @@ class Option:
         self.btprice = None
 ```
 
-这里认为传递给期权的构造函数的无风险利率和股利利率都是一年计利率，我们在构造时将其计算为连续复利。
+It is considered here that the risk-free interest rate and dividend interest rate passed to the option's constructor are both annual interest rates, and we calculate them as continuous compound interest during construction.
 
-### B-S-M 计算方法
+### B-S-M calculation method
 
-因为涉及到了股利利率，所以严格来说不是BS算法而是BSM算法。
+Because it involves dividend interest rates, strictly speaking it is not a BS algorithm but a BSM algorithm.
 
 ```python
     def bs(self):
@@ -175,12 +161,13 @@ class Option:
             self.bsprice = self.kind * self.s0 * np.exp(-self.dv * self.t) * sps.norm.cdf(
                 self.kind * d_1) - self.kind * self.k * np.exp(-self.r * self.t) * sps.norm.cdf(self.kind * d_2)
         else:
-            self.bsprice = "美式看跌期权不适合这种计算方法"
+            self.bsprice = "American put options are not suitable for this calculation method"
 ```
 
-BSM 算法本身只能用于**欧式期权**，由于美式看涨期权和欧式看涨期权价格相等，因此我们将扩展到仅仅是**不能计算美式看跌期权**。
+The BSM algorithm itself can only be used for **European options**. Since American call options and European call options are equal in price, we will extend it to only **Cannot calculate American put options**.
 
-其中我们算了d1 和 d2 它们是用于最终计算的中间变量。涉及到有股利情况下，它们是
+Among them we calculated d1 and d2 which are the intermediate variables used in the final calculation. When it comes to dividends, they are
+
 $$
 d_1 = \frac{ln\frac{S0}{k} + (r+ 0.5 \cdot \sigma^2 - dv)t}{\sigma \cdot \sqrt{t}}
 $$
@@ -189,40 +176,39 @@ $$
 d_2 = d_1 - \sigma \sqrt{t}
 $$
 
-而看涨期权（涉及股利）的价格为
+And the price of a call option (involving dividends) is
 $$
 P = S_0 \cdot e^{-dv \cdot t} \cdot N(d_1) - k \cdot e^{-rt}N(d_2)
 $$
-看跌期权的价格就是
+The price of the put option is
 $$
 P = ke^{-rt}[1-N(d_2)] - S_0[1-N(d_1)]
 $$
-这里运用了一些小技巧，将kind表示成一个flag标记，使得同一个式子能应用于看涨看跌两种情况。注意
+Some tricks are used here to express kind as a flag mark, so that the same formula can be applied to both bullish and bearish situations. Notice
 $$
 N(d) = 1 - N(-d)
 $$
-这是我们的公式能正确运行的原因。
+This is why our formula works correctly.
 
 
+### Monte Carlo simulation calculation method
 
-### 蒙特卡罗模拟计算方法
+The Monte Carlo algorithm itself can only be used for **European options**. Since American call options and European call options are equal in price, we will extend it to only **Cannot calculate American put options**.
 
-蒙特卡罗算法本身只能用于**欧式期权**，由于美式看涨期权和欧式看涨期权价格相等，因此我们将扩展到仅仅是**不能计算美式看跌期权**。
+The Monte Carlo simulation calculation method requires specifying the number of iterations.
 
-蒙特卡洛模拟计算方法需要指定迭代次数iteration。
+Note that the `zt` we generated is a list, not a single value. The distribution of all its values ​​conforms to a standard normal distribution. There are a total of iteration values, which represent the rise or fall of the fluctuation.
 
-注意我们生成的 `zt` 是一个列表，不是一个单一的值，它的所有值的分布符合一个标准正态分布，总共有iteration个值，它代表波动的上涨或下跌。
-
-接下来我们根据这个公式
+Next, we use this formula
 $$
 st = s0 * e^{(r-dv-0.5*\sigma^2)*t + \sigma *t ^{0.05}*zt}
 $$
-来计算最终价值，这里根据迭代次数生成了迭代次数个最终价值。这些最终价值要根据看涨或看跌进行 k- x 或者 x-k 的处理，并取处理后和0相比的较大值。
+To calculate the final value, here a final value of the number of iterations is generated based on the number of iterations. These final values ​​are processed by k- x or x-k depending on whether they are bullish or bearish, and the larger value compared to 0 is taken.
 
-我们计算这些最终价值的平均值，再贴现到当前日期。贴现是指原价值乘以e^(-r*t)
+We calculate the average of these final values ​​and discount them to the current date. Discount refers to the original value multiplied by e^(-r*t)
 
 ```python
-    # 蒙特卡罗定价
+    # Monte Carlo Pricing
     def mc(self, iteration):
         if self.european or self.kind == 1:
             zt = np.random.normal(0, 1, iteration)
@@ -230,38 +216,36 @@ $$
             st = np.maximum(self.kind * (st - self.k), 0)
             self.mcprice = np.average(st) * np.exp(-self.r * self.t)
         else:
-            self.mcprice = "美式看跌期权不适合这种计算方法"
+            self.mcprice = "American put options are not suitable for this calculation method"
 ```
 
+### Binary tree calculation method
 
+This method is the most difficult, but applies to all options and is therefore the most necessary. We first need to calculate u, d, p. u represents an increase, d represents a decrease, and p is a risk-neutral probability. Each period may rise or fall, and u and d measure the multiple of the increase if it rises and the multiple of the fall if it falls. p is the probability of rising, and 1-p is the probability of falling. Starting from a single starting point (the value of the underlying asset) and slowly pushing it forward into the future, it may rise or fall, and then it may rise or fall again, thus slowly forming a binary tree. At this time, the price of the binary tree is not the option value, but the estimated current price in the future. What we need is the option price.
 
-### 二叉树计算方法
-
-此方法最难，但是适用于所有期权，因此也最为必要。我们首先要计算u,d,p。u代表上涨，d代表下跌，p是一个风险中性概率。每一期可能上涨，也可能下跌，u,d即衡量上涨会涨的倍数和下跌会下跌的倍数。p即上涨的概率，1-p 是下跌的概率。从最开始的单一起点（标的资产价值）慢慢往未来推，可能上涨可能下降，下降后又可能上涨可能下降，这样子慢慢形成一棵二叉树。这时候二叉树的价格不是期权价值，是站在未来时间的估计现价。 而我们需要的是期权价格。
-
-我们需要从树的叶子节点从后往前推导期权价值。举例来说，最后一步最上面节点的期权价值等于（n = 迭代次数），每一个节点类似，只是下面的节点需要将u替换成d，n以每个节点减少2的等差往下降。
+We need to deduce the option value from the leaf nodes of the tree from back to front. For example, the option value of the top node in the last step is equal to (n = number of iterations). Each node is similar, except that the following nodes need to replace u with d, and n decreases with an equal difference of 2 for each node.
 $$
 max(0,k-s_0u^n)
 $$
-这是看跌期权，看涨期权则为
+This is a put option and a call option is
 $$
 max(0,s_0u^n-k)
 $$
-这样我们得到了二叉树最后一层叶子节点的所有期权价值。
+In this way we get all the option values ​​of the leaf nodes at the last level of the binary tree.
 
-每次往前推的过程是这样，
+The process of pushing forward every time is like this,
 
-n-1节点的期权价值等于n步对应的两个节点的风险中性概率加权再无风险利率贴现的值，（美式同时和提前行权的价值取较大值）。
+The option value of node n-1 is equal to the value of the risk-neutral probability weighted and risk-free interest rate discount of the two nodes corresponding to n steps (the value of American simultaneous and early exercise is the larger value).
 
-举例来说，s0 u^500 和 s0 u^498的父节点是s0 u^499，它的期权价值等于
+For example, the parent node of s0 u^500 and s0 u^498 is s0 u^499, and its option value is equal to
 
-p *(500的节点的期权价值) * (1-p) *(499的节点的期权价值)  × 无风险利率贴现
+p *(option value of node 500) * (1-p) *(option value of node 499) × risk-free interest rate discount
 
-无风险利率贴现就是 e^(-rt)
+The risk-free interest rate discount is e^(-rt)
 
-注意，如果是美式期权的话，这个价值还要和 k - s0 u^499 相比，（看涨是 s0 u^499 - k）取较大值。
+Note that if it is an American option, this value must be compared with k - s0 u^499 (call is s0 u^499 - k), whichever is larger.
 
-这样一层层往前推，就推导到了我们的根节点，就是站在此时此刻的期权价值。
+By pushing forward layer by layer, we arrive at our root node, which is the option value at this moment.
 
 ```python
     def bt(self, iteration):

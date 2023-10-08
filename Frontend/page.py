@@ -46,17 +46,17 @@ class page:
         self.grid.setSpacing(20)
         self.widget.setLayout(self.grid)
         grid.addWidget(self.widget, 1, 1, 13, 4)
-        # 设置标题字体
+        #Set title font
         self.font_main = QFont()
-        self.font_main.setFamily('微软雅黑')
+        self.font_main.setFamily('Microsoft Yahei')
         self.font_main.setPointSize(70)
         self.font_main.setWeight(40)
-        # 设置文本字体
+        # Set text font
         self.font_content = QFont()
-        self.font_content.setFamily('微软雅黑')
+        self.font_content.setFamily('Microsoft Yahei')
         self.font_content.setPointSize(15)
         self.font_content.setWeight(40)
-        # 一些期权参数的属性
+        # Properties of some option parameters
         self.combo_kind = None
         self.combo_european = None
         self.s0 = None
@@ -81,17 +81,17 @@ class page:
         mw.page_about.widget.hide()
         self.widget.show()
 
-    #  确认输入
+# Confirm input
     def confirm(self):
         try:
-            if self.combo_kind.currentText() == "看涨":
+            if self.combo_kind.currentText() == "bullish":
                 kind = 1
             else:
-                kind = -1
-            if self.combo_european.currentText() == "美式期权":
-                european = False
+                kind=-1
+            if self.combo_european.currentText() == "American Option":
+                european=False
             else:
-                european = True
+                european=True
             s0 = float(self.s0.text())
             k = float(self.k.text())
             sigma = float(self.sigma.text()) / 100
@@ -112,15 +112,15 @@ class page:
             t2.start()
             t3.start()
             QMessageBox.about(self.widget,
-                              "提示",
-                              "正在计算期权价格......\n请耐心等待！")
+                              "hint",
+                              "Calculating option prices...\nPlease wait patiently!")
 
             t1.join()
             t2.join()
             t3.join()
             QMessageBox.about(self.widget,
-                              "提示",
-                              "期权价格已经计算完成\n在“查看结果”标签中看看吧！")
+                             "hint",
+                              "The option price has been calculated\nCheck it out in the View Results tab!")
             self.mw.page_result.line_bs.setText(str(option.bsprice))
             self.mw.page_result.line_mc.setText(str(option.mcprice))
             self.mw.page_result.line_bt.setText(str(option.btprice))
@@ -130,9 +130,9 @@ class page:
             self.mw.btn_result.setEnabled(True)
         except ValueError:
             QMessageBox.about(self.widget,
-                              "提示",
-                              "您的输入有误......\n请仔细检查！")
+                              "hint",
+                              "Your input is incorrect...\nPlease check carefully!")
         except ZeroDivisionError:
             QMessageBox.about(self.widget,
-                              "提示",
-                              "两个日期应该设置不同时间\n波动率不能为0\n期权执行价不能为0")
+                              "hint",
+                              "The two dates should be set to different times\nThe volatility cannot be 0\nThe option strike price cannot be 0")

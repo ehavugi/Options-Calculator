@@ -2,41 +2,41 @@ from PyQt5.QtWidgets import QLabel, QLineEdit
 
 
 def result(page):
-    # 标题
+    # title
     label_main = QLabel()
     label_main.setFont(page.font_main)
-    label_main.setText(" 激扬文字")
+    label_main.setText("stimulating text")
     page.grid.addWidget(label_main, 0, 0, 1, 2)
-    # 文字
+    # Word
     label_hint = QLabel()
     label_hint.setFont(page.font_content)
-    label_hint.setText("      为您整理出期权价格的计算结果")
+    label_hint.setText(" Sort out the calculation results of option prices for you")
     page.grid.addWidget(label_hint, 1, 0, 1, 2)
 
-    # BS价格
+    # BS price
     label_content = QLabel()
     label_content.setFont(page.font_content)
-    label_content.setText("      BS 方法计算价格")
+    label_content.setText("BS method to calculate price")
     page.grid.addWidget(label_content, 2, 0)
     page.line_bs = QLineEdit(page.widget)
     page.line_bs.setEnabled(False)
     page.line_bs.setStyleSheet("QLineEdit{background-color:white;color:black}")
     page.grid.addWidget(page.line_bs, 2, 1)
 
-    # MC价格
+    #MCPrice
     label_mc = QLabel()
     label_mc.setFont(page.font_content)
-    label_mc.setText("      蒙特卡罗方法计算价格")
+    label_mc.setText("Monte Carlo method to calculate price")
     page.grid.addWidget(label_mc, 3, 0)
     page.line_mc = QLineEdit(page.widget)
     page.line_mc.setEnabled(False)
     page.line_mc.setStyleSheet("QLineEdit{background-color:white;color:black}")
     page.grid.addWidget(page.line_mc, 3, 1)
 
-    # 二叉树价格
+    # Binary tree price
     label_bt = QLabel()
     label_bt.setFont(page.font_content)
-    label_bt.setText("      二叉数方法计算价格")
+    label_bt.setText("Binary number method to calculate price")
     page.grid.addWidget(label_bt, 4, 0)
     page.line_bt = QLineEdit(page.widget)
     page.line_bt.setEnabled(False)
